@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let inputArr=process.argv.slice(2);
 let fs=require("fs");
 let path=require("path");
@@ -36,7 +37,8 @@ function treeFn(dirPath){
     console.log("TREE command implemented for", dirPath);
     let destPath;
     if(dirPath==undefined){
-        console.log("kindly enter the path");
+        treeHelper(process.cwd()," ");
+
         return;
     }else{
        let doesExist= fs.existsSync(dirPath);
@@ -76,7 +78,8 @@ function organizeFn(dirPath){
     //input=directorypath given
     let destPath;
     if(dirPath==undefined){
-        console.log("kindly enter the path");
+        destPath=process.cwd();
+        
         return;
     }else{
        let doesExist= fs.existsSync(dirPath);

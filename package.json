@@ -1,0 +1,23 @@
+{
+  "name": "fileOrganizerProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruchir194/fileOrganizerProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruchir194/fileOrganizerProject/issues"
+  },
+  "bin": {
+    "runorg": "input.js"
+  },
+  "homepage": "https://github.com/ruchir194/fileOrganizerProject#readme"
+}
