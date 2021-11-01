@@ -1,7 +1,7 @@
-let inputArr=Process.argv.slice(2);
+let inputArr=process.argv.slice(2);
 let fs=require("fs");
 let path=require("path");
-console.log(intputArr);
+console.log(inputArr);
 
 
 //node main.js tree "directoryPath"
@@ -74,14 +74,15 @@ function organizeHelper(src,dest){
     let childNames=fs.readdirSync(src);
     for(let i=0;i<childNames.length;i++){
        let childAddress= path.join(src,childNames[i]);
-      let isFile= fs.lststSync(childAddress).isFile();
-    }
+      let isFile= fs.lstatSync(childAddress).isFile();
+    
     if(isFile){
         let category= getCategory(childNames[i]);
         console.log(childNames[i],"belongs  to --> ", category);
         sendFiles(childAddress,dest,category);
         
     }
+}
 }
 
 function sendFiles(srcFilePath,dest,category){
